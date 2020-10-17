@@ -1,0 +1,210 @@
+
+/*volet ouvert*/
+#rép, #répFerme {
+   width: 50px;
+   height: auto;
+   float: left;
+   padding-right: 20px;
+   padding-left: 10px;
+   margin-top: 10px;
+}
+
+#rép {
+   position: fixed;
+   z-index: 2;
+   padding: 20px;
+}
+
+#répFerme {
+   position: fixed;
+   z-index: 2;
+}
+
+header h1 {
+   color: white;
+   margin-left: 90px;
+   margin-top: 10px;
+   text-align: start;
+
+   margin-bottom: 0;
+
+   display: block;
+   border: none;
+   padding: 0;
+   filter: drop-shadow(1px 1px 12px black);
+}
+
+
+#navig {
+   width: 250px;
+   height: 550px;
+   padding: 20px;
+   border: solid grey 4px;
+   background: lightgrey;
+   color: white;
+   text-align: start;
+   position: fixed;
+   z-index: 3;
+}
+
+.retour {
+   margin-left: 30px;
+   margin-top: 30px;
+}
+
+.retour a {
+   color: lightblue;
+   text-decoration: none;
+}
+
+#navig #indice {
+   margin-top: 30px;
+   margin-bottom: 40px;
+}
+
+#indice {
+   margin: 0 10px;
+}
+
+
+
+/*slide du volet*/
+.volet {
+   left: -300px;
+   transition: all 1s ease;
+}
+
+.voletOuvert {
+   left: 0;
+   transition: all 1s ease;
+}
+
+/*description*/
+a.intitule {
+   position: relative;
+   color: black;
+   text-decoration: none;
+}
+
+a.intitule div {
+   display: none; /* masque description */
+     
+}
+
+a.intitule:hover div {
+   z-index: 500;/* description au premier plan */
+   display: inline; /* affichage */
+   position: absolute;
+   white-space: nowrap; /* pas de saut à la ligne auto */
+  
+   top: 30px; /*position bas*/
+   left: 20px;/*position droite*/
+   background: grey;
+   color: white;
+   padding: 3px;
+   border: 1px solid white;
+}
+
+
+
+/*body*/
+body {
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-size: medium;
+   text-justify: auto;
+
+
+   background-image: url('../images/Rfond.png');
+
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+
+h1 {
+   color: white;
+   text-align: center;
+   margin: auto;
+
+   margin-bottom: 60px;
+
+   display: block;
+   border-left: lightblue solid 4px;
+   border-right: lightblue solid 4px;
+   border-radius: 10%;
+   width: fit-content;
+   padding: 10px;
+}
+h2 {
+   text-align: center;
+   filter: drop-shadow(1px 1px 6px white);
+}
+
+.basPage {
+   text-align: center;
+   font-style: italic;
+   margin-bottom: 50px;
+}
+
+
+
+/*image introduction*/
+#intro {
+   width:100%
+   display: flex;
+   justify-content: center;
+}
+
+#parchment {
+   width: 100%;
+   height: 200px;
+   filter: drop-shadow(30px 10px 4px black);
+}
+
+
+
+/*forms*/
+form {
+   width: fit-content;
+   margin: auto;
+   margin-bottom: 100px;
+   line-height: 2em;
+   text-align: center;
+}
+
+fieldset {
+   background: grey;
+   opacity: 0.9;
+   border: solid black;
+   border-radius: 10px;
+   padding: 20px 40px;
+}
+
+legend {
+   font-weight: bold;
+   background: darkseagreen;
+   padding: 0 10px;
+   border: solid;
+
+   
+}
+
+input {
+   color:black;
+}
+
+
+/*footer*/
+footer { 
+   text-align: center; 
+   color: white;
+   font-style: italic;
+   margin-top: 100px;
+}
+
+#logoFin{
+   filter: drop-shadow(1px 1px 12px lightblue);
+   border:solid white 1px;
+   border-radius: 50%;
+}

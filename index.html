@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Structures de contrôle</title>
+        <meta charset="utf-8"/>
+        <link rel="shortcut icon" type="image/x-icon" href="./images/logo.png" />
+        <link rel="stylesheet" href="./css/mise_en_page.css" />
+    </head>
+
+    <body>
+        <header>
+
+            <input type="image" src="./images/fist.png" onclick="ouverture()" title="Ouvrir le répertoire" class="ouvreRép"
+                id="rép" alt="Répertoire" />
+
+            <div id="navig" class="volet">
+
+                <input type="image" onclick="fermeture()" src="./images/fist.png" title="Fermer le répertoire" class="fermeRép"
+                    id="répFerme" alt="Fermer le répertoire" />
+
+                <h1 id="index">Répertoire</h1>
+
+                    <nav id="listeEx">
+                        <ul>    
+                            <li><a href="#titre" title="haut de page">
+                                    Haut de page
+                                </a></li>
+                            <li><a href="#ex1" class="intitule">
+                                    Exercice 1
+                                    <div>Ecrire une page qui permet de saisir 3 nombres.</br>
+                                        Un bouton affiche leur somme, un autre le produit , un autre la max de ces valeurs.
+                                    </div>
+                                </a></li>
+                            <li><a href="#ex2" class="intitule">
+                                    Exercice 2
+                                    <div>
+                                        Ecrire une page qui permet de saisir le prix de l'article HT et son nombre d'exemplaires; une liste
+                                        de choix affiche les différents taux de TVA.</br>
+                                        A la saisie de ces 3 valeurs (0 par défaut), le prix TTC est affiché (pas de bouton pour appeler la
+                                        fonction de calcul du prix TTC).
+                                    </div>
+                                </a></li>
+                            <li><a href="#ex3" class="intitule">
+                                    Exercice 3
+                                    <div>
+                                        Ecrire une page qui permet de saisir un verbe du 1er groupe et qui en affiche la conjugaison au
+                                        présent.
+                                    </div>
+                                </a></li>
+                            <li><a href="#ex4" class="intitule">
+                                    Exercice 4
+                                    <div>
+                                        Ecrire une page qui permet de saisir Nom et Prénom et affiche les initiales.
+                                    </div>
+                                </a></li>
+                            <li><a href="#ex5" class="intitule">
+                                    Exercice 5
+                                    <div>
+                                        Ecrire une page qui permet de saisir un mot, une fonction affichera s'il s'agit d'un palyndrome.
+                                    </div>
+                                </a></li>
+                            <li><a href="#ex6" class="intitule">
+                                    Exercice 6
+                                    <div>
+                                        Ecrire une page qui permet de saisir quatre entiers et qui affiche la moyenne des nombres prositifs.
+                                    </div>
+                                </a></li>
+                            <li><a href="#ex7" class="intitule">
+                                    Exercice 7
+                                    <div>
+                                        Ecrire une page qui permet de saisir l'âge d'un enfant à l'utilisateur.
+                                        </br> Le programme affiche sa cathégorie selon son âge : poussin, pupille, minime ou cadet.
+                                    </div>
+                                </a></li>
+                            <li><a href="#ex8" class="intitule">
+                                    Exercice 8
+                                    <div>
+                                        Ecrire une page qui permet de saisir un nombre compris entre 1 et 5 jusqu'à ce que la réponse
+                                        convienne.
+                                        </br>Tant que la saisie n'est pas bonne, la zone est bordée de rouge;
+                                        </br>Quand elle est correcte, le fond devient vert clair et la bordur vert foncé.
+                                    </div>
+                                </a></li>
+                            <li><a href="#ex9" class="intitule">
+                                    Exercice 9
+                                    <div>
+                                        Votre page propose de deviner un entier caché (généré par un random).
+                                        </br>A chaque valeur saisie, le programme indique si plus grand ou plus petit.
+                                        </br>Toujours proposer la possibilité d'abandonner (et donc de voir le nombre).
+                                        </br>A la fin, afficher le nombre d'essais effectués.
+                                    </div>
+                                </a></li>
+                            <li><a href="#ex10" class="intitule">
+                                    Exercice 10
+                                    <div>
+                                        L'utilisateur saisit le numéro d'un mois de l'année (entre 1 et 12, à valiser), et le programme
+                                        affiche le nom du mois.
+                                    </div>
+                                </a></li>
+                            <li><a href="#ex11" class="intitule">
+                                    Exercice 11
+                                    <div>
+                                        L'utilisateur saisit une date, la page lui affiche la date du lendemain.
+                                        </br>La date saisie doit être validée (mois pairs/impairs, février, année bissextile...).
+                                        </br>Affiner le calcul pour le mois de février.
+                                    </div>
+                                </a></li>
+                            <li><a href="#ex12" class="intitule">
+                                    Exercice 12
+                                    <div>
+                                        Une boulangerie est ouverte de 7h à 13h et de 16h à 20h, sauf lundi après-midi et mardi toute la
+                                        journée.
+                                        </br>On suppose donc que l'heure h est un entier entre 0 et 23. Le jour j code 0 pour lundi, 1 pour
+                                        mardi etc.
+                                        </br>La page permet de saisir l'heure à laquelle on souhaite passer à la boulangerie, le programme
+                                        indique alors si la boulangerie est ou non ouverte.
+                                    </div>
+                                </a></li>
+                            <li><a href="#ex13" class="intitule">
+                                    Exercice 13
+                                    <div>
+                                        L'auberge dans laquelle vous vous arrêtez pour la nuit adapte ses prix en fonction de l'âge du
+                                        client et du poids de ses bagages.
+                                        <br>Les règles ne vous étant pas très claires, vous décidez d'écrire un petit programme qui vous
+                                        permettra facilement de connaître le prix d'une nuit.
+                                        <br>Ce que doit faire le programme :
+                                        <br>Une chambre ne coûte rien si on a l'âge de l'aubergiste (60 ans),
+                                        <br>5 écus si on a strictement moins de 10 ans,
+                                        <br>20 écus pour les autres,
+                                        <br>Un supplment de 10 écus est appliqué si on a au moins 20kg de bagages.
+                                        <br>Le programme doit lire, en deux entiers, l'âge du client et le poids des bagages, et afficher le
+                                        prix sous forme d'un entier.
+                                        <br>Créer l'interface qui permet d'exécuter le programme.
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </nav>
+            </div>        
+        </header>
+
+        <script type="text/javascript" src="./js/structures_js.js">
+        </script>
+
+        <h1>Introduction</h1>
+            <div id="intro">
+                    <img id= "parchment" src="./images/parchment.png" tile="Introduction" alt="imageIntroduction" width="2%" height="1%" />
+            </div>
+
+
+            <h2 id="ex1">Exercice 1</h2>
+
+                <form method="GET" action="#" name="form1" id="form1">
+                    <fieldset>
+                        <legend class="intitule">Veuillez saisir 3 nombres :</legend>
+                
+                        <input type="text" size=4 onkeypress="return isNumber(event)" placeholder="nombre 1" name="nb1" id="nb1">
+                        <input type="text" size=4 onkeypress="return isNumber(event)" placeholder="nombre 2" name="nb2" id="nb2">
+                        <input type="text" size=4 onkeypress="return isNumber(event)" placeholder="nombre 3" name="nb3" id="nb3">
+                        </br>
+                
+                        <input type="button" value="Somme" onclick="addition()">
+                        <input type="button" value="Produit" onclick="produit()">
+                        <input type="button" value="Moyenne" onclick="moyenne()">
+                        <input type="button" value="Max" onclick="maximum()">
+                        </br>
+                
+                        <input type="text" size=8 name="resultat" id="resultat" onkeypress="return noTyping(event)"
+                            placeholder="Résultat">
+                    </fieldset>
+                </form>
+
+            <h2 id="ex2">Exercice 2</h2>
+
+                <form method="GET" action="#" name="form2" id="form2">
+                    <fieldset>
+                        <legend class="intitule">Saisir:  le prix Hors Taxe d'un article, la TVA et le nombre d'articles :
+                        </legend>
+                
+                        <label for="prixHT">Prix Hors Taxe : </label>
+                        <input type="text" size=10 onkeypress="return isNumber(event)" oninput="calcOnInput()" value="0" name="prixHT" id="prixHT">
+                        </br>
+                        <label for="qut1">Quantité : </label>
+                        <input type="text" size=10 onkeypress="return isNumber(event)" oninput="calcOnInput()" value="0" name="qut1" id="qut1">
+                        </br>
+                        <label for="TVA">TVA : </label>
+                        <select name="TVA" id="TVA" onchange="calcOnInput()">
+                            <option value="0" selected>Sélectionner un taux
+                            <option value="1.2">Normal : 20%
+                            <option value="1.1">Intermédiaire : 10%
+                            <option value="1.055">Réduit : 5,5%
+                            <option value="1.021">Particulier : 2,1%
+                        </select>
+                        </br>
+                
+                        <label for="prixTTC">Prix total TTC : </label>
+                        <input type="text" disabled size=10 name="prixTTC" id="prixTTC">
+                    </fieldset>
+                </form>
+
+            <h2 id="ex3">Exercice 3</h2>
+                <form method="GET" action="#" name="form3" id="form3">
+                    <fieldset>
+                        <legend class="intitule">Saisir un verbe du premier groupe à l'infinitif :</legend>
+                
+                        <input type="text" size=10 onkeypress="return isLetter(event);" value="manger" name="verbe" id="verbe">
+                        <input type="button" value="Conjugaison" onclick="premGrp()">
+                        </br>
+                
+                        <label for="je">Je </label>
+                        <input type="text" disabled size="10" id="je" name="je" value="">
+                        </br>
+                        <label for="tu">Tu </label>
+                        <input type="text" disabled size="10" id="tu" name="tu" value="">
+                        </br>
+                        <label for="il">Il / Elle / On </label>
+                        <input type="text" disabled size="10" id="il" name="il" value="">
+                        </br>
+                        <label for="nous">Nous </label>
+                        <input type="text" disabled size="10" id="nous" name="nous" value="">
+                        </br>
+                        <label for="vous">Vous </label>
+                        <input type="text" disabled size="10" id="vous" name="vous" value="">
+                        </br>
+                        <label for="ils">Ils / Elles </label>
+                        <input type="text" disabled size="10" id="ils" name="ils" value="">
+                    </fieldset>
+                </form>
+
+            <h2 id="ex4">Exercice 4</h2>
+                <form method="GET" action="#" name="form4" id="form4">
+                    <fieldset>
+                        <legend class="intitule">Entrez un nom et prénom :</legend>
+                
+                        <label for="prenom">Prénom : </label>
+                        <input type="text" size="10" id="prenom" name="prenom" placeholder="prénom" onkeypress="return isLetter(event)" oninput="generInitiales()">
+                        </br>
+                        <label for="nom">Nom : </label>
+                        <input type="text" size="10" id="nom" name="nom" placeholder="nom" oninput="generInitiales()">
+                        </br>
+                        <label for="initiales">Initiales : </label>
+                        <input type="text" disabled size="2" id="initiales" name="initiales">
+                    </fieldset>
+                </form>
+
+            <h2 id="ex5">Exercice 5</h2>
+                <form method="GET" action="#" name="form5" id="form5">
+                    <fieldset>
+                        <legend class="intitule">Saisir un mot :</legend>
+                
+                        <input type="text" size="20" id="testPal" name="testPal" onkeypress="return isLetter(event)" placeholder="Votre mot">
+                        </br>
+                        <input type="button" value="Test palindrome" onclick="palindrome()">
+                        </br>
+                        <input type="text" size="50" id="resPal" name="resPal" disabled>
+                    </fieldset>
+                </form>
+
+            <h2 id="ex6">Exercice 6</h2>
+                <form method="GET" action="#" name="form6" id="form6">
+                    <fieldset>
+                        <legend class="intitule">Saisir 4 nombres positifs :</legend>
+                
+                        <input type="text" size=4 onkeypress="return isNumberPosNeg(event)" placeholder="nombre 1" name="nb1-2" id="nb1-2">
+                        <input type="text" size=4 onkeypress="return isNumberPosNeg(event)" placeholder="nombre 2" name="nb2-2" id="nb2-2">
+                        <input type="text" size=4 onkeypress="return isNumberPosNeg(event)" placeholder="nombre 3" name="nb3-2" id="nb3-2">
+                        <input type="text" size=4 onkeypress="return isNumberPosNeg(event)" placeholder="nombre 4" name="nb4-2" id="nb4-2">
+                        </br>
+    
+                        <input type="button" value="Calcul" onclick="moynPos()">
+                        </br>
+                        <label for="resMoyPos">La moyenne est de : </label>
+                        <input type="text" size="4" id="resMoyPos" name="resMoyPos" disabled>
+                    </fieldset>
+                </form>
+
+            <h2 id="ex7">Exercice 7</h2>
+                <form method="GET" action="#" name="form7" id="form7">
+                    <fieldset>
+                        <legend class="intitule">Saisir l'âge de l'enfant :</legend>
+                
+                        <label for="age">Age de l'enfant : </label>
+                        <select name="age" id="age" onchange="categorie()">
+                            <option value="0" selected>age
+                            <option value="1">6-7 ans
+                            <option value="2">8-9 ans
+                            <option value="3">10-11 ans
+                            <option value="4">+ de 12 ans
+                        </select>
+                        </br>
+                        <label for="resCath">L'enfant est dans la catégorie : </label>
+                        <input type="text" size="10" id="resCath" name="resCath" disabled>
+                    </fieldset>
+                </form>
+
+            <h2 id="ex8">Exercice 8</h2>
+                <form method="GET" action="#" name="form8" id="form8">
+                    <fieldset>
+                        <legend class="intitule">Saisir un nombre entre 1 et 5 (inclu) :</legend>
+                
+                        <input type="text" size=2 onkeypress="return isNumberPosNeg(event)" name="nb-8" id="nb-8">
+                
+                        <input type="button" value="Vérification" onclick="verifNbValide(1,5,'nb-8')">
+                    </fieldset>
+                </form>
+
+            <h2 id="ex9">Exercice 9</h2>
+                <form method="GET" action="#" name="form9" id="form9">
+                    <fieldset>
+                        <legend class="intitule">Le Juste Prix (mais sans Vincent Lagaf')</legend>
+                
+                        <input type="button" value="Commencer !" onclick="randomiser()">
+                        </br>
+                        <label for="devinette">Quel est le prix ?</label>
+                        <input type="text" size=2 onkeypress="return isNumber(event)" name="devinette"
+                            id="devinette">
+                        </br>
+                        <input type="button" value="Deviner" onclick="devineNb()">
+                        <input type="button" value="Abandonner" onclick="giveUp()">
+                        <input type="text" size="30" id="reponse" name="reponse" disabled>
+                        </br>
+                        <label for="tentatives">Tentatives :</label>
+                        <input type="text" size="2" id="tentatives" name="tentatives" disabled>
+                    </fieldset>
+                </form>
+
+            <h2 id="ex10">Exercice 10</h2>
+                <form method="GET" action="#" name="form10" id="form10">
+                    <fieldset>
+                        <legend class="intitule">Saisir le numéro d'un mois de l'année :</legend>
+                
+                        <input type="text" size=2 onkeypress="return isNumber(event)" name="mois" id="mois">
+                
+                        <input type="button" value="Vérification" onclick="verifMois()">
+                        <input type="text" size=40 disabled name="resMois" id="resMois">
+                    </fieldset>
+                </form>
+
+            <h2 id="ex11">Exercice 11</h2>
+            <form method="GET" action="#" name="form10" id="form10">
+                <fieldset>
+                    <legend class="intitule">Entrez une date :</legend>
+
+                    <input type="text" size=1 onkeypress="return isNumber(event)" onkeyup="AutoTab('', 'mm', 2)" placeholder="jj"
+                        name="jj" id="jj">
+                    <input type="text" size=1 onkeypress="return isNumber(event)" onkeyup="AutoTab('', 'aaaa', 2)" placeholder="mm"
+                        name="mm" id="mm">
+                    <input type="text" size=2 onkeypress="return isNumber(event)" maxlength=4 placeholder="aaaa" name="aaaa" id="aaaa">
+                    
+                    <input type="button" value="Valider" onclick="Lendemain()">
+                    </br>
+                    <label for="lendemain">Le lendemain on sera le : </label>
+                    <input type="text" size=6 disabled name="lendemain" id="lendemain">
+
+                </fieldset>
+            </form>
+
+            <h2 id="ex12">Exercice 12</h2>
+                <form method="GET" action="#" name="form12" id="form12">
+                    <fieldset>
+                        <legend class="intitule">On va chercher le pain !</legend>
+                
+                        <label for="hPassage">A quelle heure voulez-vous venir ?</label>
+                        <input type="text" size=2 onkeypress="return isNumber(event)" name="hPassage" id="hPassage">
+                        <label>h/24h</label>
+                        </br>
+                        <label for="jPassage">Quel jour ?</label>
+                        <select name="jPassage" id="jPassage">
+                            <option value="0">Lundi
+                            <option value="1">Mardi
+                            <option value="2">Mercredi
+                            <option value="3">Jeudi
+                            <option value="4">Vendredi
+                            <option value="5">Samedi
+                            <option value="6">Dimanche
+                        </select>
+                        </br>
+                        <input type="button" value="Vérification" onclick="verifOuvert()">
+                        <input type="text" size=40 disabled name="resPassage" id="resPassage">
+                    </fieldset>
+                </form>
+
+            <h2 id="ex13">Exercice 13</h2>
+                <form method="GET" action="#" name="form13" id="form13">
+                    <fieldset>
+                        <legend class="intitule">Au Dod'Auberge</legend>
+
+                        <label for="ageClient">Quel age avez-vous ?</label>
+                        <select name="ageClient" id="ageClient" onchange="calcPrix()">
+                            <option value="0">age
+                            <option value="1">- de 10 ans
+                            <option value="2">10 ans ou +
+                            <option value="3">60 ans
+                        </select> 
+                        <br>
+                        <label for="poidsBagages">Saisir le poids de vos bagages :</label>
+                        <select name="poidsBagages" id="poidsBagages" onchange="calcPrix()">
+                            <option value="0">poids
+                            <option value="1">Moins de 20kg
+                            <option value="2">20kg ou plus
+                        </select>
+                        <br>
+                        <label for="prixNuit">Ca fera :</label>
+                        <input disabled size=5 name="prixNuit" id="prixNuit">
+                    </fieldset>
+                </form>
+
+
+        <footer>
+            <img id= "logoFin" src="./images/raymanrébou.png" tile="" alt="logoFin" width="8%" height="3%" />
+            KUNZ Quentin - q.kunz@ludus-academie.com
+        </footer>
+    </body>
+</html>
